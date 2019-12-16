@@ -1,0 +1,132 @@
+{% extends 'appOne/base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="fullscreen-bg text-center" id="home">
+    <video loop muted autoplay poster="main_page2.jpg" class="fullscreen-bg-video">
+        <source src="{% static 'pictures/main_page5.mp4' %}" type="video/webm">
+    </video>
+    <div style="margin-top: 20%;">
+        <p style="color:white; font-size: 230%;">Hello, I'm <span style="color:#82ed18;">Kenny Dang</span>. <br>I'm a full-stack web developer.</p>
+        <a href="#about" class="introButton">View my work &#8594</a>
+    </div>
+</div>
+<div class="container mw-100 mh-100 mainBody" id="#body">
+    <div class="row text-center mainNavigation" id="#navigation">
+        <div class="col-1 subNavigationCol">
+            <a href="#home" class="subNavigationButton">HOME</a>
+        </div>
+        <div class="col-1 subNavigationCol">
+            <a href="#about" class="subNavigationButton">ABOUT</a>
+        </div>
+        <div class="col-1 subNavigationCol">
+            <a href="#portfolio" class="subNavigationButton">PORTFOLIO</a>
+        </div>
+        <div class="col-1 subNavigationCol">
+            <a href="#contact" class="subNavigationButton">CONTACT</a>
+        </div>
+    </div>
+    <div class="row text-center mainAbout" id="about">
+        <div>
+            <p class="subAboutHeader">ABOUT</p>
+            <div class="row text-center subAboutRow">
+                <div class="col-4">
+                    <img src="{% static 'pictures/profile.jpg' %}" alt="" class="subAboutPicture">
+                </div>
+                <div class="col-4 text-left">
+                    <p class="subAboutText">I am an aspiring and motivated web developer looking to gain more real-world experience.
+                        I have bachelors and masters degree in Electrical and Computer Engineering from the University of Louisville.
+                        I am currently working full-time as a Simulation Engineer at Gulfstream Aerospace located in Savannah Georgia
+                        where I am able to develop and maintain software for aircraft simulations. I have gained web development experience
+                        through personal projects and volunteering for a startup company. Through my experience in software development
+                        and technical design, I have a drive to jump start my career in web development.</p>
+                </div>
+                <div class="col-4">
+                    <h4>Skill Breakdown</h4>
+                    <p style="font-style: italic;">Percent of skill used in current projects</p>
+                    <ul class="text-left subAboutul">
+                        <li class="subAboutli" style="width: 90%;"><span class="subAboutliText">HTML</span></li>
+                        <li class="subAboutli" style="width: 100%;"><span class="subAboutliText">CSS</span></li>
+                        <li class="subAboutli" style="width: 40%;"><span class="subAboutliText">Javascript</span></li>
+                        <li class="subAboutli" style="width: 10%;"><span class="subAboutliText">PHP</span></li>
+                        <li class="subAboutli" style="width: 20%;"><span class="subAboutliText">JQuery</span></li>
+                        <li class="subAboutli" style="width: 50%;"><span class="subAboutliText">Bootstrap</span></li>
+                        <li class="subAboutli" style="width: 80%;"><span class="subAboutliText">Django</span></li>
+                        <li class="subAboutli" style="width: 80%;"><span class="subAboutliText">Python</span></li>
+                        <li class="subAboutli"style="width: 40%;"><span class="subAboutliText">SQL</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row text-center mainPortfolio" id="portfolio">
+        <p class="subPortfolioHeader">PORTFOLIO</p>
+        <div class="row subPortfolioRow" id="portfolio1">
+            <div class="col subPortfolioCol">
+                <input id="1" type="image" class="subPortfolioImage" src="{% static 'pictures/product_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+            <div class="col subPortfolioCol">
+                <input id="2" type="image" class="subPortfolioImage" src="{% static 'pictures/survey_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+            <div class="col subPortfolioCol">
+                <input id="3" type="image" class="subPortfolioImage" src="{% static 'pictures/tribute_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+        </div>
+        <div class="popup">
+            <span class="popupimage" id="myPopup">
+                <div class="popupRow1">
+                    <img id="popImg" src="" alt="" style="width: 100%; height:100%;">
+                </div>
+                <div class="text-left" style="padding-top: 3em; padding-left: 2em;padding-right: 2em;">
+                    <h1 id="popTitle">Hellfire Kitchen</h1>
+                    <p style="font-style: italic;" id="popCaption"><span style="border-bottom:solid; border-bottom-width:thin;">Tribute Page</span></p>
+                    <p id="popBody">This site was to pay homage to one of my idols, Gordon Ramsey.</p>
+                    <a href="" style="padding-left:2.4em;text-decoration: none; padding-top:0.5em; display: block;height: 3em; width: 10em; background-color: #45bbff; color: white; border:solid; border-width:thin;">View page</a>
+                    <div class="row" style="margin-top:4em;">
+                        <div class="col text-left">
+                            <input type="image" src="{% static 'pictures/left-arrow.png' %}" id="popupLeft" style="width:2em; height:2em;" onclick="popupSwitch(this.id)">
+                            <p>previous page</p>
+                        </div>
+                        <div class="col text-right">
+                            <input type="image" src="{% static 'pictures/right-arrow.png' %}" id="popupRight" style="width:2em; height:2em;" onclick="popupSwitch(this.id)">
+                            <p>next page</p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="row subPortfolioRow" id="portfolio2">
+            <div class="col subPortfolioCol">
+                <input id="4" type="image" class="subPortfolioImage" src="{% static 'pictures/company_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+            <div class="col subPortfolioCol">
+                <input id="5" type="image" class="subPortfolioImage" src="{% static 'pictures/training_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+            <div class="col subPortfolioCol">
+                <input id="6" type="image" class="subPortfolioImage" src="{% static 'pictures/disaster_page.png' %}" onclick="popupFunction(this.id)">
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mainContact" id="contact">
+        <div>
+            <p style="font-size: 2em; font-weight: bold; margin-top:2em; color: white;">CONTACT</p>
+            <p style="color: white;">Have a question or want to work together?</p>
+            <form action="MAILTO:dang.kenny84@gmail.com" method="post" enctype="text/plain" id="email">
+                <div class="form-group" style="margin: 0.5em;">
+                    <input type="text" name="Name" placeholder="Your name" style="color: #7b7b9c;background-color: #484857; border: none; width: 29em; padding: 0.5em;">
+                </div>
+                <div class="form-group" style="margin: 0.5em;">
+                    <input type="text" name="Email" placeholder="Your email" style="color: #7b7b9c;background-color: #484857; border: none; width: 29em; padding: 0.5em;">
+                </div>
+                <div class="form-group" style="margin: 0.5em;">
+                    <textarea rows="4" cols="50" name="Comment" form="email" style="color: #7b7b9c;background-color: #484857; border: none; width: 29em; height: 10em; padding: 0.5em;" placeholder="Your message"></textarea>
+                </div>
+                <input type="submit" style="background-color: transparent; color: white; width: 6em; height; 1em;">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

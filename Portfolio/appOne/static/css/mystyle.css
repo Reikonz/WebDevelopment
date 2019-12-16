@@ -1,0 +1,186 @@
+.fullscreen-bg {
+    position: static;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    height: 100vh;
+    width: 100vw;
+}
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+/*********** Intro CSS **********/
+.introButton{
+    text-decoration: none;
+    padding-top:0.5em;
+    display: block;
+    height: 3em;
+    width: 10em;
+    background-color: Transparent;
+    color: white;
+    border:solid;
+    border-width:thin;
+    position: absolute;
+    left: 46%;
+}
+
+/*********** Main Body CSS **********/
+.mainBody{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+/*********** Main Navigation CSS **********/
+.mainNavigation{
+    background-color:#142a36;
+    width: 100vw;
+    height: 3em;
+    padding-left: 7em;
+    border-bottom:ridge;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.subNavigationCol{
+    position: relative;
+    top: 20%;
+}
+
+.subNavigationButton{
+    background: transparent;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+/*********** Main About CSS **********/
+.mainAbout{
+    justify-content: center;
+    height: 100vh;
+}
+
+.subAboutHeader{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top:2em;
+}
+
+.subAboutRow{
+    height: 50%;
+    width: 100%;
+    margin-top: 4em;
+}
+
+.subAboutPicture{
+    width:85%;
+    height:100%;
+}
+.subAboutText{
+    line-height: 2em;
+}
+
+.subAboutul{
+    line-height:200%;
+    list-style:none;
+}
+.subAboutli{
+    background: #528eff;
+    border:solid;
+    border-width:thin;
+}
+.subAboutliText{
+    margin-left:1em;
+}
+
+/*********** Main Portfolio CSS **********/
+.mainPortfolio{
+    justify-content: center;
+    height: 100vh;
+    background-color: #e1e9ed;
+}
+
+.subPortfolioHeader{
+font-size: 2em;
+font-weight: bold;
+margin-top: 2em;
+}
+
+.subPortfolioRow{
+    height: 40%;
+    padding: 1em;
+}
+.subPortfolioCol{
+    width: 20%;
+    height: 100%;
+}
+
+.subPortfolioImage{
+    width: 100%;
+    height: 100%;
+}
+
+/*********** POPUP CSS **********/
+/* The actual popup */
+.popup {
+  position: absolute;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* The actual popup */
+.popup .popupimage {
+  visibility: hidden;
+  width: 50em;
+  height: 50em;
+  background-color: white;
+  color: black;
+  text-align: center;
+  position: absolute;
+  top:2em;
+  left:-5em;
+  z-index: 1;
+
+  margin-left: -20em;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.dimmed{
+    opacity: 0.2;
+}
+
+.popupRow1{
+    width: 100%;
+    height:50%;
+}
+
+
+
+/*********** Main Contact CSS **********/
+.mainContact{
+    justify-content: center;
+    height: 100vh;
+    Background-color:#142a36;
+}
+
